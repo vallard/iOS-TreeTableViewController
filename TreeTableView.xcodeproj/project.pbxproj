@@ -21,6 +21,11 @@
 		5E35A7B116DC6626006492A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E35A79216DC6626006492A3 /* Foundation.framework */; };
 		5E35A7B916DC6626006492A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E35A7B716DC6626006492A3 /* InfoPlist.strings */; };
 		5E35A7BC16DC6626006492A3 /* TreeTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E35A7BB16DC6626006492A3 /* TreeTableViewTests.m */; };
+		5E35A7C716DC6656006492A3 /* TTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E35A7C616DC6655006492A3 /* TTTableViewController.m */; };
+		5E35A7CA16DC670B006492A3 /* TTExampleTreeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E35A7C916DC670A006492A3 /* TTExampleTreeTableViewController.m */; };
+		5E35A7CD16DC6CD1006492A3 /* TTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E35A7CC16DC6CD0006492A3 /* TTCell.m */; };
+		5E35A7D516DC7898006492A3 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E35A7D316DC7898006492A3 /* disclosure.png */; };
+		5E35A7D616DC7898006492A3 /* disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E35A7D416DC7898006492A3 /* disclosure@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,15 @@
 		5E35A7B816DC6626006492A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E35A7BA16DC6626006492A3 /* TreeTableViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeTableViewTests.h; sourceTree = "<group>"; };
 		5E35A7BB16DC6626006492A3 /* TreeTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeTableViewTests.m; sourceTree = "<group>"; };
+		5E35A7C516DC6655006492A3 /* TTTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTableViewController.h; sourceTree = "<group>"; };
+		5E35A7C616DC6655006492A3 /* TTTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTableViewController.m; sourceTree = "<group>"; };
+		5E35A7C816DC670A006492A3 /* TTExampleTreeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTExampleTreeTableViewController.h; sourceTree = "<group>"; };
+		5E35A7C916DC670A006492A3 /* TTExampleTreeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTExampleTreeTableViewController.m; sourceTree = "<group>"; };
+		5E35A7CB16DC6CD0006492A3 /* TTCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCell.h; sourceTree = "<group>"; };
+		5E35A7CC16DC6CD0006492A3 /* TTCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCell.m; sourceTree = "<group>"; };
+		5E35A7CE16DC6E12006492A3 /* TTSkin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSkin.h; sourceTree = "<group>"; };
+		5E35A7D316DC7898006492A3 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
+		5E35A7D416DC7898006492A3 /* disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +126,17 @@
 		5E35A79616DC6626006492A3 /* TreeTableView */ = {
 			isa = PBXGroup;
 			children = (
+				5E35A7D716DC78A1006492A3 /* Images */,
+				5E35A7CE16DC6E12006492A3 /* TTSkin.h */,
+				5E35A7C516DC6655006492A3 /* TTTableViewController.h */,
+				5E35A7C616DC6655006492A3 /* TTTableViewController.m */,
+				5E35A7CB16DC6CD0006492A3 /* TTCell.h */,
+				5E35A7CC16DC6CD0006492A3 /* TTCell.m */,
 				5E35A79F16DC6626006492A3 /* TTAppDelegate.h */,
 				5E35A7A016DC6626006492A3 /* TTAppDelegate.m */,
 				5E35A79716DC6626006492A3 /* Supporting Files */,
+				5E35A7C816DC670A006492A3 /* TTExampleTreeTableViewController.h */,
+				5E35A7C916DC670A006492A3 /* TTExampleTreeTableViewController.m */,
 			);
 			path = TreeTableView;
 			sourceTree = "<group>";
@@ -150,6 +172,15 @@
 				5E35A7B716DC6626006492A3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E35A7D716DC78A1006492A3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5E35A7D316DC7898006492A3 /* disclosure.png */,
+				5E35A7D416DC7898006492A3 /* disclosure@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +259,8 @@
 				5E35A7A316DC6626006492A3 /* Default.png in Resources */,
 				5E35A7A516DC6626006492A3 /* Default@2x.png in Resources */,
 				5E35A7A716DC6626006492A3 /* Default-568h@2x.png in Resources */,
+				5E35A7D516DC7898006492A3 /* disclosure.png in Resources */,
+				5E35A7D616DC7898006492A3 /* disclosure@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +297,9 @@
 			files = (
 				5E35A79D16DC6626006492A3 /* main.m in Sources */,
 				5E35A7A116DC6626006492A3 /* TTAppDelegate.m in Sources */,
+				5E35A7C716DC6656006492A3 /* TTTableViewController.m in Sources */,
+				5E35A7CA16DC670B006492A3 /* TTExampleTreeTableViewController.m in Sources */,
+				5E35A7CD16DC6CD1006492A3 /* TTCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
