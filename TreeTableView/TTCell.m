@@ -134,6 +134,8 @@
 
 #pragma mark -
 #pragma mark - TTTableExpanderDelegate Method
+
+// Double recursion!  Agghhh!
 - (void)updateNumberOfTableCells:(TTTableViewController *)tableViewController numberOfCells:(NSNumber *)numberOfCells {
     // tack on one for the first cell?
     

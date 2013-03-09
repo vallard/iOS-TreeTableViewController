@@ -25,6 +25,7 @@
 
 #pragma mark - TTCell Delegate Methods
 
+// look out!  Double recursion!!
 - (void)cellSizeChanged:(TTCell *)ttCell numberOfCells:(NSNumber *)numberOfCells {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:ttCell];
     if (numberOfCells.intValue == 1) {
@@ -43,6 +44,7 @@
         tableHeight += 1; // add the height of the cell header which is not in this tree.
         [self.delegate updateNumberOfTableCells:self numberOfCells:[NSNumber numberWithInt:tableHeight]];
     }
+    // I found this cool trick on the internet.  Resizes cells without reloading data!
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
 }
