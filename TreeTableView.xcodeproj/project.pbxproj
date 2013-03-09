@@ -26,6 +26,7 @@
 		5E35A7CD16DC6CD1006492A3 /* TTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E35A7CC16DC6CD0006492A3 /* TTCell.m */; };
 		5E35A7D516DC7898006492A3 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E35A7D316DC7898006492A3 /* disclosure.png */; };
 		5E35A7D616DC7898006492A3 /* disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E35A7D416DC7898006492A3 /* disclosure@2x.png */; };
+		5EDA0FFF16EB210A0037ADF4 /* version1-screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EDA0FFE16EB210A0037ADF4 /* version1-screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		5E35A7CE16DC6E12006492A3 /* TTSkin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSkin.h; sourceTree = "<group>"; };
 		5E35A7D316DC7898006492A3 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
 		5E35A7D416DC7898006492A3 /* disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disclosure@2x.png"; sourceTree = "<group>"; };
+		5EDA0FFE16EB210A0037ADF4 /* version1-screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "version1-screenshot.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 		5E35A7D716DC78A1006492A3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5EDA0FFE16EB210A0037ADF4 /* version1-screenshot.png */,
 				5E35A7D316DC7898006492A3 /* disclosure.png */,
 				5E35A7D416DC7898006492A3 /* disclosure@2x.png */,
 			);
@@ -261,6 +264,7 @@
 				5E35A7A716DC6626006492A3 /* Default-568h@2x.png in Resources */,
 				5E35A7D516DC7898006492A3 /* disclosure.png in Resources */,
 				5E35A7D616DC7898006492A3 /* disclosure@2x.png in Resources */,
+				5EDA0FFF16EB210A0037ADF4 /* version1-screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +472,7 @@
 				5E35A7C116DC6626006492A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E35A7C216DC6626006492A3 /* Build configuration list for PBXNativeTarget "TreeTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +481,7 @@
 				5E35A7C416DC6626006492A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
