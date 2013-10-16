@@ -27,7 +27,7 @@
 
 // look out!  Double recursion!!
 - (void)cellSizeChanged:(TTCell *)ttCell numberOfCells:(NSNumber *)numberOfCells {
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:ttCell];
+    NSIndexPath *indexPath = [self strictIndexPath:[self.tableView indexPathForCell:ttCell]];
     if (numberOfCells.intValue == 1) {
         [self.cellHeights removeObjectForKey:indexPath];
     }else {
@@ -130,8 +130,8 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat heightForCell = TABLE_CELL_HEIGHT;
-    if ([self.cellHeights objectForKey:indexPath]) {
-        heightForCell = [(NSNumber *)[self.cellHeights objectForKey:indexPath] floatValue] * TABLE_CELL_HEIGHT;
+    if ([self.cellHeights objectForKey:[self strictIndexPath:indexPath]]) {
+        heightForCell = [(NSNumber *)[self.cellHeights objectForKey:[self strictIndexPath:indexPath]] floatValue] * TABLE_CELL_HEIGHT;
     }
 
     return heightForCell;
@@ -150,6 +150,14 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (NSIndexPath *)strictIndexPath:(NSIndexPath *)indexPath
+{
+    if ([indexPath class] == [NSIndexPath class]) {
+        return indexPath;
+    }
+    return [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
 }
 
 @end
